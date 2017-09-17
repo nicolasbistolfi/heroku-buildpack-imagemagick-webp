@@ -9,7 +9,8 @@ CACHE_FILE="$CACHE_DIR/imagemagick-webp.tar.gz"
 mkdir -p $CACHE_DIR
 mkdir -p $VENDOR_DIR
 
-# if [ ! -f $CACHE_FILE ]; then
+#if [ ! -f $CACHE_FILE ]; then
+  apt-get install libjpeg-dev libpng-dev libtiff-dev libgif-dev
 
   cd $BUILD_DIR
 
