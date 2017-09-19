@@ -10,8 +10,6 @@ mkdir -p $CACHE_DIR
 mkdir -p $VENDOR_DIR
 
 if [ ! -f $CACHE_FILE ]; then
-  sudo apt-get install libjpeg-dev libpng-dev libtiff-dev libgif-dev
-
   cd $BUILD_DIR
 
   # install nasm
