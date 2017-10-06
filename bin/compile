@@ -16,7 +16,7 @@ mkdir -p $VENDOR_DIR
   NASM_VERSION="2.13.01"
   NASM_FILE="nasm-$NASM_VERSION.tar.gz"
   NASM_DIR="nasm-$NASM_VERSION"
-  NASM_URL="http://www.nasm.us/pub/nasm/releasebuilds/$NASM_VERSION/$NASM_FILE"
+    NASM_URL="http://www.nasm.us/pub/nasm/releasebuilds/$NASM_VERSION/$NASM_FILE"
 
   echo "-----> Downloading nasm from $NASM_URL"
   curl -L --silent $NASM_URL | tar xz
@@ -63,7 +63,7 @@ mkdir -p $VENDOR_DIR
 
   # install imagemagick
 
-  IMAGE_MAGICK_VERSION="7.0.7-3"
+  IMAGE_MAGICK_VERSION="7.0.7-6"
   IMAGE_MAGICK_FILE="ImageMagick-$IMAGE_MAGICK_VERSION.tar.gz"
   IMAGE_MAGICK_DIR="ImageMagick-$IMAGE_MAGICK_VERSION"
   IMAGE_MAGICK_URL="http://www.imagemagick.org/download/releases/$IMAGE_MAGICK_FILE"
