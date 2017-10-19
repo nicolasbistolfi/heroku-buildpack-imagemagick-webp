@@ -10,19 +10,6 @@ mkdir -p $CACHE_DIR
 mkdir -p $VENDOR_DIR
 
 if [ ! -f $CACHE_FILE ]; then
-
-case "$STACK" in
-  heroku-16)
-    graphviz_version="2.38.0"
-    packages=(libgvc6_2.38.0-12ubuntu2_amd64.deb
-              libcgraph6_2.38.0-12ubuntu2_amd64.deb
-              libcdt5_2.38.0-12ubuntu2_amd64.deb
-              libpathplan4_2.38.0-12ubuntu2_amd64.deb) ;;
-  *)
-    echo "Buildpack error: unsupported stack $STACK" | a
-    exit 1 ;;
-esac
-
   cd $BUILD_DIR
 
   # install nasm
