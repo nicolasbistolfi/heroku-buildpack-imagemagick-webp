@@ -102,16 +102,3 @@ ACTUAL_INSTALL_PATH="$HOME/vendor/imagemagick-webp"
 mkdir -p $(dirname $PROFILE_PATH)
 echo "export PATH=$ACTUAL_INSTALL_PATH/bin:\$PATH" >> $PROFILE_PATH
 echo "export LD_LIBRARY_PATH=$ACTUAL_INSTALL_PATH/lib:\$LD_LIBRARY_PATH" >> $PROFILE_PATH
-
-
-wget http://pecl.php.net/get/imagick-3.4.0RC3.tgz
-tar -xvzf imagick-3.4.0RC3.tgz
-cd imagick-3.4.0RC3/
-phpize
-./configure
-checkinstall
-
-"extension=imagick.so" > /etc/php/7.0/mods-available/imagick.ini
-
-ln -s /etc/php/7.0/mods-available/imagick.ini /etc/php/7.0/fpm/conf.d/20-imagick.ini
-service php7.0-fpm restart
